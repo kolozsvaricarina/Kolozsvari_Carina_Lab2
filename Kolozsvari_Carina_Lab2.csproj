@@ -8,12 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Pages\Authors\Index.cshtml.cs" />
     <Compile Remove="Pages\Index.cshtml.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Remove="Pages\Authors\Index.cshtml" />
     <Content Remove="Pages\Index.cshtml" />
   </ItemGroup>
 
