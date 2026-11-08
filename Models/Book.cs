@@ -23,6 +23,8 @@ namespace Kolozsvari_Carina_Lab2.Models
 
         public Publisher? Publisher { get; set; } //navigare
 
+        public ICollection<Borrowing>? Borrowings { get; set; }
+
         public ICollection<BookCategory>? BookCategories { get; set; }
 
     }
