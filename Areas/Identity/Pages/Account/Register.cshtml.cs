@@ -94,6 +94,8 @@ namespace Kolozsvari_Carina_Lab2.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
+                    var role = await _userManager.AddToRoleAsync(user, "User");
+
                     var member = new Member { Email = Input.Email };
                     _context.Member.Add(member);
                     await _context.SaveChangesAsync();

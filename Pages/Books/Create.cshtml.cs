@@ -1,4 +1,5 @@
 using Kolozsvari_Carina_Lab2.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -6,8 +7,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Kolozsvari_Carina_Lab2.Pages.BookPages;
 
+[Authorize(Roles = "Admin")]
 public class CreateModel : BookCategoriesPageModel
 {
+   
     private readonly Kolozsvari_Carina_Lab2Context _context;
 
     public CreateModel(Kolozsvari_Carina_Lab2Context context)
